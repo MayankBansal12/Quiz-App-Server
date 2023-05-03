@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import { config } from "dotenv";
 import cors from "cors"
 import morgan from "morgan";
+import router from "./router/route.js";
 
 const port=8000 || process.env.PORT;
 const app=express();
@@ -15,10 +16,13 @@ app.use(express.urlencoded());
 config();
 
 // Routes
+app.use("/api",router);
 
 app.get('/',(req,res)=>{
     res.json("Get Request aayi hai!");
 })
+
+
 app.listen(port,()=>{
     console.log("Server is running on ",port);
 })
