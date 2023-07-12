@@ -17,3 +17,15 @@ const questionsModel=new mongoose.Schema({
 });
 
 export default mongoose.model("Question",questionsModel);
+
+/* 
+{
+    id: 1,
+    question : "Javascript is an _______ language",
+    options : [
+        'Object-Oriented',
+        'Object-Based',
+        'Procedural',
+    ]
+}
+*/
